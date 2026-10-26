@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA na Escola — Reflexão Interativa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fundo animado -->
+  <div class="fundo-animado">
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
+  </div>
+
+  <!-- TELA 1: Inicial -->
+  <section id="tela-inicial" class="tela ativa">
+    <div class="card">
+      <!-- Ilustração SVG de um robô -->
+      <svg class="ilustracao" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="55" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.4"/>
+        <rect x="35" y="40" width="50" height="45" rx="10" fill="#1a1a2e" stroke="#00f0ff" stroke-width="2"/>
+        <circle cx="50" cy="60" r="5" fill="#00f0ff"/>
+        <circle cx="70" cy="60" r="5" fill="#00f0ff"/>
+        <rect x="50" y="72" width="20" height="4" rx="2" fill="#ff2e88"/>
+        <line x1="60" y1="40" x2="60" y2="25" stroke="#00f0ff" stroke-width="2"/>
+        <circle cx="60" cy="22" r="4" fill="#ff2e88"/>
+      </svg>
+
+      <h1 class="titulo">IA na Escola</h1>
+      <p class="subtitulo">Refletindo sobre o futuro da educação</p>
+      <p class="descricao">
+        Uma experiência interativa sobre ética, tecnologia<br>
+        e o papel da Inteligência Artificial nas escolas.
+      </p>
+      <button class="btn" onclick="iniciar()">🚀 Entrar na Missão</button>
+    </div>
+  </section>
+
+  <!-- TELA 2: Quiz -->
+  <section id="tela-quiz" class="tela">
+    <div class="card">
+      <div class="barra-progresso">
+        <div id="progresso-preenchido" class="progresso-preenchido"></div>
+      </div>
+      <p id="contador" class="contador"></p>
+
+      <h2 id="pergunta" class="pergunta"></h2>
+      <div id="alternativas" class="alternativas"></div>
+      <p id="feedback" class="feedback"></p>
+
+      <button id="btn-proxima" class="btn escondido" onclick="proxima()">Próxima →</button>
+    </div>
+  </section>
+
+  <!-- TELA 3: Interação -->
+  <section id="tela-interacao" class="tela">
+    <div class="card">
+      <h2 class="titulo-secao">🗣 Momento de Reflexão</h2>
+      <p id="pergunta-plateia" class="pergunta-plateia"></p>
+      <textarea id="resposta-plateia" class="textarea"
+                placeholder="Escreva sua reflexão aqui (ou deixe em branco)..." rows="4"></textarea>
+      <button class="btn" onclick="continuar()">Continuar →</button>
+    </div>
+  </section>
+
+  <!-- TELA 4: Final -->
+  <section id="tela-final" class="tela">
+    <div class="card">
+      <div id="medalha" class="medalha">🏆</div>
+      <h2 class="titulo-secao">Considerações Finais</h2>
+      <p id="resultado" class="resultado"></p>
+      <p id="ranking" class="ranking"></p>
+
+      <h3 class="subtitulo-impacto">💭 O que este projeto nos ensina:</h3>
+      <ul class="lista">
+        <li>A IA já está na escola — mas precisa ser usada com <strong>ética</strong>.</li>
+        <li><strong>Pensamento crítico</strong> é a habilidade mais valiosa da era digital.</li>
+        <li>Tecnologia sem humanidade não transforma a educação.</li>
+        <li>Toda a comunidade escolar deve participar das decisões.</li>
+      </ul>
+
+      <p class="mensagem-final">🌱 Que esta experiência gere reflexão e mudança!</p>
+      <button class="btn" onclick="reiniciar()">🔄 Jogar Novamente</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
